@@ -6,11 +6,37 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ComponentesWeb!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     </head>
     <body>
-        <div>Aplicacion Web</div>
+        <section class="section">
+            <div class="hero is-dark">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Evaluacion N°1 Componentes Web
+                        </h1>
+                        <p class="subtitle">
+                            <br>Ejercicio: <strong> Reporte de Compras  </strong>!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <form action="compra.jsp">
+                <div class="field">
+                    <label class="label">Nombre Vendedor</label>
+                    <div class="control">
+                        <input class="input" name="nombreV" type="text" placeholder="Text input">
+                    </div>
+                </div>
+                <button class="button is-primary">Submit</button>
+
+            </form>
+        </section>
     </body>
 </html>
