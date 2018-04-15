@@ -5,6 +5,7 @@
  */
 package Objetos;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 /**
@@ -17,11 +18,12 @@ public class Productos {
     public String nombre;
     public int precio;
     public int cantidad;
+    public static int inscripcion;
 
     public Productos() {
     }
 
-    public Productos(String nombre, int precio, int cantidad) {
+    Productos(String nombre, int precio, int cantidad) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
@@ -46,8 +48,15 @@ public class Productos {
         int name = producto.get(n).precio;
         return name;
     }
-    public static void limpiarArrayList(){
+
+    public static void limpiarArrayList() {
         producto.clear();
     }
+
+    public static int mostrarNVenta() {
+        inscripcion = (inscripcion + 1);
+        return inscripcion;
+    }
+
 
 }

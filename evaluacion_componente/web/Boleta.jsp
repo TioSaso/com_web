@@ -49,10 +49,18 @@
                     <tr class="is-selected"><th>Datos Cliente</th></tr>
                     <tr><th>Fecha:</th><td><%   Date fechacompra = new Date();
                         int dia = fechacompra.getDate();
-                        int mes = fechacompra.getMonth()+1;
+                        int mes = fechacompra.getMonth() + 1;
                         int year = (fechacompra.getYear() + 1900);
                         out.println(dia + "/" + mes + "/" + year);
-                                %></td></tr>
+                                %></td>
+                        <th>Numero Venta:</th>
+                        <td>
+                            <%
+                                out.println(Productos.mostrarNVenta());
+                            %>
+                        </td>
+                    </tr>
+
                 </tbody>
                 <tbody>
                     <tr>
@@ -132,7 +140,7 @@
                         </td>
                         <th> Monto Con Iva:</th>
                         <td>
-                            <%out.println(montotal + (montotal + 0.14));%>
+                            <%out.println(montotal + (montotal * 0.14));%>
                         </td>
                     </tr>
                 </tbody>

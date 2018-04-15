@@ -112,7 +112,7 @@
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Valor Unidad:</p>
-                                <p class="title"><strong>$</strong>400.000</p>
+                                <p class="title"><strong>$</strong>40.000</p>
                             </div>
                         </div>
                         <div class="level-item has-text-centered">
@@ -206,7 +206,7 @@
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Valor Unidad:</p>
-                                <p class="title"><strong>$</strong>800.000 </p>
+                                <p class="title"><strong>$</strong>80.000 </p>
                             </div>
                         </div>
                         <div class="level-item has-text-centered">
@@ -253,7 +253,7 @@
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Valor Unidad:</p>
-                                <p class="title"><strong>$</strong>999.999</p>
+                                <p class="title"><strong>$</strong>99.999</p>
                             </div>
                         </div>
                         <div class="level-item has-text-centered">
@@ -300,7 +300,7 @@
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Valor Unidad:</p>
-                                <p class="title"><strong>$</strong> 530.000</p>
+                                <p class="title"><strong>$</strong> 53.000</p>
                             </div>
                         </div>
                         <div class="level-item has-text-centered">
