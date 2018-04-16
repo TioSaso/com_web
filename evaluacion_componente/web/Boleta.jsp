@@ -43,108 +43,108 @@
         </div>
         <br></br>
         <div class="container">
+            <i class="fas fa-3x fa-eye"></i>
+                <table class="table is-bordered is-narrow is-havorable">
+                    <tbody>
+                        <tr class="is-selected"><th>Datos Cliente</th></tr>
+                        <tr><th>Fecha:</th><td><%   Date fechacompra = new Date();
+                            int dia = fechacompra.getDate();
+                            int mes = fechacompra.getMonth() + 1;
+                            int year = (fechacompra.getYear() + 1900);
+                            out.println(dia + "/" + mes + "/" + year);
+                                    %></td>
+                            <th>Numero Venta:</th>
+                            <td>
+                                <%
+                                    out.println(Productos.mostrarNVenta());
+                                %>
+                            </td>
+                        </tr>
 
-            <table class="table is-bordered is-narrow is-havorable">
-                <tbody>
-                    <tr class="is-selected"><th>Datos Cliente</th></tr>
-                    <tr><th>Fecha:</th><td><%   Date fechacompra = new Date();
-                        int dia = fechacompra.getDate();
-                        int mes = fechacompra.getMonth() + 1;
-                        int year = (fechacompra.getYear() + 1900);
-                        out.println(dia + "/" + mes + "/" + year);
-                                %></td>
-                        <th>Numero Venta:</th>
-                        <td>
-                            <%
-                                out.println(Productos.mostrarNVenta());
-                            %>
-                        </td>
-                    </tr>
-
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Comprador:</th>
-                        <td><%=request.getParameter("nombre")%></td>
-                        <th>Rut:</th>
-                        <td><%=request.getParameter("rut")%></td> 
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Email:</th>
-                        <td><%=request.getParameter("correo")%></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Direccion:</th>
-                        <td><%=request.getParameter("direccion")%></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Metodo de Pago:</th>
-                        <td><%=request.getParameter("pago")%></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Comentario:</th>
-                        <td><%=request.getParameter("comentario")%></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th class="is-selected">Datos Vendedor</th>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Vendedor:</th>
-                        <td>TiendaRiclom</td>
-                        <th>Rut:</th>
-                        <td>XXX.XXX.XXX-X</td> 
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Email:</th>
-                        <td>tiendariclom@tiendita.cl</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr class="is-selected"><th>Productos</th></tr>
-                </tbody>
-                <%
-                    float a = 0;
-                    for (int i = 0; i < 10; i++) {
-                        if (Productos.mostrarObjeto(i) > 0) {
-                            out.println("<tbody><tr><th>Producto:</th><td>" + Productos.mostrarNombre(i) + "</td><th>Precio:</th><td>" + Productos.mostrarPrecio(i) + "</td><th>Cantidad:</th><td>" + Productos.mostrarObjeto(i) + "<td></tr></tbody>");
-                            a = a + (Productos.mostrarObjeto(i) * Productos.mostrarPrecio(i));
-                        }
-                    }
-                %>
-                <tbody>
-                    <tr>
-                        <th>Monto:</th>
-                        <td><%
-                            float montotal = 0;
-                            for (int i = 0; i < 10; i++) {
-                                if (Productos.mostrarObjeto(i) > 0) {
-                                    montotal = montotal + (Productos.mostrarPrecio(i) * Productos.mostrarObjeto(i));
-                                }
-
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Comprador:</th>
+                            <td><%=request.getParameter("nombre")%></td>
+                            <th>Rut:</th>
+                            <td><%=request.getParameter("rut")%></td> 
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Email:</th>
+                            <td><%=request.getParameter("correo")%></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Direccion:</th>
+                            <td><%=request.getParameter("direccion")%></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Metodo de Pago:</th>
+                            <td><%=request.getParameter("pago")%></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Comentario:</th>
+                            <td><%=request.getParameter("comentario")%></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th class="is-selected">Datos Vendedor</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Vendedor:</th>
+                            <td>TiendaRiclom</td>
+                            <th>Rut:</th>
+                            <td>XXX.XXX.XXX-X</td> 
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Email:</th>
+                            <td>tiendariclom@tiendita.cl</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="is-selected"><th>Productos</th></tr>
+                    </tbody>
+                    <%
+                        float a = 0;
+                        for (int i = 0; i < 10; i++) {
+                            if (Productos.mostrarObjeto(i) > 0) {
+                                out.println("<tbody><tr><th>Producto:</th><td>" + Productos.mostrarNombre(i) + "</td><th>Precio:</th><td>" + Productos.mostrarPrecio(i) + "</td><th>Cantidad:</th><td>" + Productos.mostrarObjeto(i) + "<td></tr></tbody>");
+                                a = a + (Productos.mostrarObjeto(i) * Productos.mostrarPrecio(i));
                             }
-                            out.println(montotal);%>
-                        </td>
-                        <th> Monto Con Iva:</th>
-                        <td>
-                            <%out.println(montotal + (montotal * 0.14));%>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        }
+                    %>
+                    <tbody>
+                        <tr>
+                            <th>Monto:</th>
+                            <td><%
+                                float montotal = 0;
+                                for (int i = 0; i < 10; i++) {
+                                    if (Productos.mostrarObjeto(i) > 0) {
+                                        montotal = montotal + (Productos.mostrarPrecio(i) * Productos.mostrarObjeto(i));
+                                    }
+
+                                }
+                                out.println(montotal);%>
+                            </td>
+                            <th> Monto Con Iva:</th>
+                            <td>
+                                <%out.println(montotal + (montotal * 0.14));%>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
         </div>
     </body>
 </html>
